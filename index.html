@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>허스키렌즈 강의 자료</title>
+
+<style>
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+#menubar {
+	background : rgb(110, 140, 239);
+}
+#menubar ul {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+}
+#menubar ul li {
+	display : inline-block;
+	list-style-type : none;
+	padding : 0px 15px;
+}
+#menubar ul li a {
+	color : white;
+  	text-decoration : none;
+}
+#menubar ul li a:hover {
+ 	color : rgb(170, 240, 235);
+}
+
+h3 {
+	font : italic bold 35px consolas, sans-serif;
+}
+
+span {
+	color :rgb(230, 100, 100);
+	font-weight : bold;
+}
+
+p {
+	font-size : 25px;
+}
+
+
+
+.grid-image {
+    display:flex;
+    width : 65%;
+    height: 65%;
+    align-items:flex-start;
+    margin:30px 0;
+}
+.grid-image img {
+    width:calc(33.333% - 10px);
+    margin:0 15px 15px 0;
+}
+.grid-image img:nth-of-type(3n),
+.grid-image img:last-child {
+    margin-right:0;
+}
+@media screen and (max-width:640px){
+  .grid-image img {
+    width:calc(50% - 15px);
+  }
+}
+@media screen and (max-width:480px){
+  .grid-image img:nth-of-type(2n) {
+    margin-right:0;
+  }
+  .grid-image img:nth-of-type(3n) {
+    margin-right:15px;
+  }
+}
+
+.grid-image2 {
+    display:flex;
+    align-items:flex-start;
+    margin:30px 0;
+}
+.grid-image2 img {
+    margin:auto;
+}
+
+.grid-image3 img{
+	width : 80%;
+	height: 30%;
+	margin: auto;
+	display: block;
+}
+
+.grid-image4 img{
+	width : 30%;
+	height: 30%;
+	margin: auto;
+	display: block;
+}
+
+</style>
+</head>
+<body>
+<nav id="menubar">
+	<ul>
+		<li><a href="#얼굴인식">얼굴인식</a></li>
+		<li><a href="#오브젝트추적">오브젝트추적</a></li>
+		<li><a href="#오브젝트인식">오브젝트인식</a></li>
+		<li><a href="#라인추적">라인추적</a></li>
+		<li><a href="#색상인식">색상인식</a></li>
+		<li><a href="#태그인식">태그인식</a></li>
+	</ul>
+</nav>
+
+
+<article id="얼굴인식">
+<br><br>
+<div style='background-color: rgba(245, 168, 168, 0.5)'>
+	<h3>얼굴인식 (Face Recongnition)</h3>
+	<hr>
+	<p>아래에 주어진 예시 사진을 활용하여 허스키렌즈로 학습시켜보세요.<br>
+	배우지 않은 것을 배울 준비가 되었다면 화면에 <span>흰색 Face 프레임</span>이 나타납니다.<br>
+	버튼을 눌러 학습시켰다면 <span>파란색 프레임</span>으로 바뀌고
+	<span>'Face : ID 1'</span>이라고 나타납니다!<br><br>
+	만약 <span>여러 사람의 얼굴</span>을 한 번에 인식시키고 싶다면<br>
+	다이얼(Function) 버튼을 2초간 누르기 -> <span>Learn Multiple</span>로 가서 
+	다이얼 버튼을 눌러 선택하고 좌,우로 돌려 조절하기 -- <br> -> Save & Return로 가서 다이얼버튼을 누르기 -> 'Do you save data?' 질문에 'Yes'로 다이얼 버튼을 누르기<br>
+	(오른쪽으로 갈수록 인식 양이 많아짐)</p>
+	<br>
+</div>
+<div class="grid-image">
+	<img src="수지1.jpg" />
+	<img src="강동원1.jpg" />
+	<img src="마동석1.jpg" />
+</div>
+<div class="grid-image">
+	<img src="수지2.jpg" />
+	<img src="강동원2.jpg" />
+	<img src="강동원3.jpg" />
+</div>
+<div class="grid-image">
+	<img src="수지3.jpg" />
+	<img src="마동석2.jpg" />
+	<img src="마동석3.jpg" />
+</div>
+</article>
+
+<br><br><br>
+
+<article id="오브젝트추적">
+<br><br>
+<div style='background-color: rgba(252, 217, 141, 0.5)'>
+	<h3>오브젝트추적 (Object Tracking)</h3>
+	<hr>
+	<p>이것은 허스키렌즈가 물체를 추적하는 기능입니다.<br>
+	여러분의 필기구나 물건을 활용하여 허스키렌즈로 학습시켜보세요.<br>
+	배우지 않은 것을 배울 준비가 되었다면 화면에<span>노란색 프레임</span>이 나타납니다.<br>
+	버튼을 눌러 학습시켰다면 <span>노란색 프레임</span> 위에 
+	<span>'Learning : ID 1'</span>이라고 나타납니다!</p>
+	<br>
+</div>
+
+<div class="grid-image2">
+	<img src="오브젝트1.png" />
+</div>
+</article>
+
+<br><br><br>
+
+<article id="오브젝트인식">
+	<br><br>
+<div style='background-color: rgba(232, 255, 151, 0.5)'>
+	<h3>오브젝트인식 (Object Recognintion)</h3>
+	<hr>
+	<p>이것은 허스키렌즈가 <span>기본적으로 학습되어있는 물체</span>를 제공하는 기능입니다.<br>
+	물병(Bottle), 자동차(Car), 버스(Bus), 고양이(Cat), 강아지(Dog), 새(Bird) 등을 인식합니다.<br>
+	한번 인식시켜 보세요!</p>
+	<br>
+</div>
+
+<div class="grid-image">
+	<img src="자동차1.jpg" />
+	<img src="사람1.jpg" />
+	<img src="개1.jpg" />
+	<img src="개2.jpg" />
+</div>
+<div class="grid-image">
+	<img src="물병1.jpg" />
+	<img src="물병2.jpg" />
+	<img src="새2.jpg" />
+	<img src="새1.jpg" />
+</div>
+</article>
+
+<br><br><br>
+
+<article id="라인추적">
+	<br><br>
+<div style='background-color: rgba(132, 255, 148, 0.5)'>
+	<h3>라인추적 (Line Tracking)</h3>
+	<hr>
+	<p>이것은 허스키렌즈가 <span>선</span>을 따라 화살표 모양으로 추적합니다.<br>
+	배우지 않은 것을 배울 준비가 되었다면 화면에 <span>노란 십자가와 흰색 화살표</span>가 나타납니다.<br>
+	초점을 맞추고 버튼을 눌러 학습시켰다면 <span>파란색 화살표</span>로 나타납니다.<br>
+	아래의 예시 사진과 주변을 둘러보며 선을 찾아 추적해보세요!</p>
+	<br>
+</div>
+
+<div class="grid-image">
+	<img src="선1.jpg" />
+	<img src="선2.jpg" />
+</div>
+</article>
+
+<br><br><br>
+
+<article id="색상인식">
+	<br><br>
+<div style='background-color: rgba(87, 191, 252, 0.5)'>
+	<h3>색상인식 (Color Recognintion)</h3>
+	<hr>
+	<p>아래에 주어진 예시 사진을 활용하여 허스키렌즈로 학습시켜보세요.<br>
+	배우지 않은 것을 배울 준비가 되었다면 화면에 <span>노란 십자가와 흰색 프레임'</span>이 나타납니다.<br>
+	버튼을 눌러 학습시켰다면 <span>노란색 프레임</span>으로 바뀌며
+	<span>'Color : ID 1'</span>이라고 나타납니다!</p>
+	<br>
+</div>
+
+<div class="grid-image3">
+	<img src="색상표1.jpg" />
+</div>
+<div class="grid-image4">
+	<img src="색상표2.jpg" />
+</div>
+</article>
+
+<br><br><br>
+
+<article id="태그인식">
+	<br><br>
+<div style='background-color: rgba(184, 129, 230, 0.5)'>
+	<h3>태그인식 (Tag Recognintion)</h3>
+	<hr>
+	<p>아래에 주어진 예시 사진을 활용하여 허스키렌즈로 학습시켜보세요.<br>
+	학습시키길 원하는 태그에 <span>주황색 십자가</span>를 정확히 맞추어 학습시켜주세요.<br>
+	버튼을 눌러 학습시켰다면 해당 태그를 인식시켰을 때, <span>파란색 프레임</span>으로 바뀌며
+	<span>'Tag : ID 1'</span>이라고 나타납니다!<br><br>
+
+	(노란색 프레임이 화면에 나타난다면 허스키렌즈가 학습 중임을 나타냅니다.)<br><br>
+
+	만약 <span>여러개의 태그를</span>을 한 번에 인식시키고 싶다면<br>
+	다이얼(Function) 버튼을 2초간 누르기 -> <span>Learn Multiple</span>로 가서 
+	다이얼 버튼을 눌러 선택하고 좌,우로 돌려 조절하기 -- <br> -> Save & Return로 가서 다이얼버튼을 누르기 -> 'Do you save data?' 질문에 'Yes'로 다이얼 버튼을 누르기<br>
+	(오른쪽으로 갈수록 인식 양이 많아짐)</p>
+	<br>
+</div>
+
+<div class="grid-image2">
+	<img src="태그1.jpg" />
+</div>
+</article>
+
+</body>
+</html>
